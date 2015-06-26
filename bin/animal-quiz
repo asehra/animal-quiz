@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'animal_quiz'
+
+puts 'Think of an animal...'
+puts 'Is it an elephant?'
