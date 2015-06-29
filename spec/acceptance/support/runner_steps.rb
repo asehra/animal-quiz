@@ -23,8 +23,11 @@ module RunnerSteps
   step 'the guess is :guess' do |guess|
     if(guess == 'correct')
       type 'y'
+      type 'n'
     else
       type 'n'
+      type 'whatever'
+      type 'whatever'
       type 'whatever'
       type 'whatever'
     end
@@ -44,5 +47,21 @@ module RunnerSteps
   step 'I answer :animal' do |animal|
     type(animal)
     type('whatever')
+    type('whatever')
+    type('whatever')
+  end
+
+  step 'the :command has learned the answer of :question for :animal' do |command, question, animal|
+    run_interactive(command)
+    type 'n'
+    type animal
+    type question
+    type 'n'
+  end
+
+  step 'I start over' do
+    type 'y'
+    type 'y'
+    type 'n'
   end
 end
