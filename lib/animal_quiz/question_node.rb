@@ -10,6 +10,20 @@ module AnimalQuiz
 
     def traverse
       puts question
+
+      if read_input == 'y'
+        self.yes_node = yes_node.traverse
+      else
+        self.no_node = no_node.traverse
+      end
+
+      self
+    end
+
+    private
+
+    def read_input
+      gets.chomp
     end
   end
 end

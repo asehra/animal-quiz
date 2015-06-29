@@ -51,15 +51,23 @@ module RunnerSteps
     type('whatever')
   end
 
-  step 'the :command has learned the answer of :question for :animal' do |command, question, animal|
+  step 'the :command has learned that answer of :question is :answer for :animal' do |command, question, answer, animal|
     run_interactive(command)
     type 'n'
     type animal
     type question
-    type 'n'
+    type answer == 'yes' ? 'y' : 'n'
   end
 
   step 'I start over' do
+    type 'y'
+    type 'y'
+    type 'y'
+    type 'n'
+  end
+
+  step 'I answer :answer to the learned question' do |answer|
+    type 'y'
     type 'y'
     type 'y'
     type 'n'

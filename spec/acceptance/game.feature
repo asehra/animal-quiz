@@ -37,6 +37,11 @@ Feature: Animal quiz can be played on command line.
     Then the quiz says 'For a rabbit, what is the answer to your question? (y or n)'
 
   Scenario: Quiz starts over with the new question
-    Given the 'animal-quiz' has learned the answer of 'Is it a small animal?' for 'rabbit'
+    Given the 'animal-quiz' has learned that answer of 'Is it a small animal?' is 'yes' for 'rabbit'
     When I start over
     Then the quiz says 'Is it a small animal?'
+
+  Scenario: Quiz guesses the learned answer
+    Given the 'animal-quiz' has learned that answer of 'Is it a small animal?' is 'yes' for 'rabbit'
+    When I answer 'y' to the learned question
+    Then the quiz says 'Is it an rabbit?'
