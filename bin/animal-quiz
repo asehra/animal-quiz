@@ -4,3 +4,17 @@ require 'animal_quiz'
 
 puts 'Think of an animal...'
 puts 'Is it an elephant?'
+
+answer = gets.chomp
+
+if answer == 'y'
+  puts 'I win'
+  puts 'Play again?'
+else
+  puts 'You win. Help me learn from my mistake before you go...'
+  puts 'What animal were you thinking of?'
+  animal = gets.chomp
+  puts "Give me a question to distinguish a #{animal} from an elephant."
+  question = gets.chomp
+  puts "For a #{animal}, what is the answer to your question? (y or n)"
+end
