@@ -1,5 +1,6 @@
 module AnimalQuiz
   class QuestionNode
+    include ConsoleIO
 
     attr_reader :question
     attr_accessor :no_node, :yes_node
@@ -18,16 +19,6 @@ module AnimalQuiz
       end
 
       self
-    end
-
-    private
-
-    def print_output(output)
-      puts output
-    end
-
-    def read_input
-      gets.chomp
     end
   end
 end

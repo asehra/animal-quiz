@@ -1,6 +1,8 @@
 module AnimalQuiz
 
   class AnimalNode 
+    include ConsoleIO
+    
     attr_reader :name
 
     def initialize(name)
@@ -47,14 +49,6 @@ module AnimalQuiz
       print_output 'You win. Help me learn from my mistake before you go...'
       print_output 'What animal were you thinking of?'
       AnimalNode.new(read_input)
-    end
-
-    def read_input
-      gets.chomp
-    end
-
-    def print_output(output)
-      puts(output)
     end
 
     def with_article(name)
