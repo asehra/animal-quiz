@@ -1,4 +1,4 @@
-# AnimalQuiz
+# AnimalQuiz ![](https://travis-ci.org/asehra/animal-quiz.svg)
 
 A solution to the [Animal Quiz](https://github.com/Ladtech/ruby-bootcamp/blob/master/exercise-9/animal_quiz.pdf).
 
