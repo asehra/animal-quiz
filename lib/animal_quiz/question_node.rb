@@ -9,7 +9,7 @@ module AnimalQuiz
     end
 
     def traverse
-      puts "#{question} (y or n)"
+      print_output "#{question} (y or n)"
 
       if read_input == 'y'
         self.yes_node = yes_node.traverse
@@ -21,6 +21,10 @@ module AnimalQuiz
     end
 
     private
+
+    def print_output(output)
+      puts output
+    end
 
     def read_input
       gets.chomp

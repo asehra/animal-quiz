@@ -2,6 +2,8 @@ module AnimalQuiz
   RSpec.describe QuestionNode do
     subject(:question_node) { described_class.new('Is it a large animal?') }
     
+    before { allow(question_node).to receive(:print_output) }
+
     context 'traverse' do
       let(:yes_node) { instance_double(AnimalNode, traverse: traversed_yes) }
       let(:no_node) { double(traverse: traversed_no) }
@@ -33,7 +35,7 @@ module AnimalQuiz
         end
       end
 
-      context 'user answers yes' do
+      context 'user answers no' do
         before do
           allow(question_node).to receive(:read_input).and_return('n')
         end
