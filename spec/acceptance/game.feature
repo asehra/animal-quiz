@@ -44,4 +44,4 @@ Feature: Animal quiz can be played on command line.
   Scenario: Quiz guesses the learned answer
     Given the 'animal-quiz' has learned that answer of 'Is it a small animal?' is 'yes' for 'rabbit'
     When I answer 'y' to the learned question
-    Then the quiz says 'Is it an rabbit?'
+    Then the quiz says 'Is it a rabbit?'

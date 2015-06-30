@@ -9,7 +9,7 @@ module AnimalQuiz
       
       @decision_tree = @decision_tree.traverse
 
-      puts 'Play again?'
+      puts 'Play again? (y or n)'
       play if gets.chomp == 'y'
     end
   end

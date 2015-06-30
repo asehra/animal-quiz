@@ -4,11 +4,11 @@ module AnimalQuiz
     attr_reader :name
 
     def initialize(name)
-      @name = name
+      @name = with_article(name)
     end
 
     def traverse
-      print_output "Is it an #{ name }?"
+      print_output "Is it #{ name }? (y or n)"
 
       answer = read_input
 
@@ -25,10 +25,10 @@ module AnimalQuiz
     def learn_new_animal
       new_animal = obtain_new_animal
 
-      print_output "Give me a question to distinguish a #{ new_animal.name } from an #{ name }."
+      print_output "Give me a question to distinguish #{ new_animal.name } from #{ name }."
       question = QuestionNode.new(read_input)
       
-      print_output "For a #{ new_animal.name }, what is the answer to your question? (y or n)"
+      print_output "For #{ new_animal.name }, what is the answer to your question? (y or n)"
 
       if read_input == 'y'
         question.yes_node = new_animal
@@ -55,6 +55,10 @@ module AnimalQuiz
 
     def print_output(output)
       puts(output)
+    end
+
+    def with_article(name)
+      "a#{ "aeiou".include?(name[0]) ? 'n' : '' } #{name}"
     end
   end
 end
