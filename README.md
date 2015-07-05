@@ -1,4 +1,4 @@
-# AnimalQuiz ![Travis CI](https://travis-ci.org/asehra/animal-quiz.svg) [![Code Climate](https://codeclimate.com/github/asehra/animal-quiz/badges/gpa.svg)](https://codeclimate.com/github/asehra/animal-quiz)
+# AnimalQuiz [![Travis CI](https://travis-ci.org/asehra/animal-quiz.svg)](https://travis-ci.org/asehra/animal-quiz) [![Code Climate](https://codeclimate.com/github/asehra/animal-quiz/badges/gpa.svg)](https://codeclimate.com/github/asehra/animal-quiz)
 
 A solution to the [Animal Quiz](https://github.com/Ladtech/ruby-bootcamp/blob/master/exercise-9/animal_quiz.pdf).
 
